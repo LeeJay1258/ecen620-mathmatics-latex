@@ -1,0 +1,56 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+
+		"editor.fontSize": 16,
+
+        "latex-workshop.latex.autoBuild.run": "never",
+        "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    
+        // 设置 latex-workshop 的 PDF　预览程序，external　指的是外部程序
+        "latex-workshop.view.pdf.viewer": "external",
+        "latex-workshop.view.pdf.ref.viewer": "external",
+        "latex-workshop.view.pdf.external.viewer.command": "C:/Users/15969/AppData/Local/SumatraPDF/SumatraPDF.exe",  //注意修改路径
+        "latex-workshop.view.pdf.external.viewer.args": [
+            "%PDF%"
+        ],
+    
+        // 配置正向、反向搜索：.tex -> .pdf
+        "latex-workshop.view.pdf.external.synctex.command": "C:/Users/15969/AppData/Local/SumatraPDF/SumatraPDF.exe", 
+        "latex-workshop.view.pdf.external.synctex.args": [ 
+            "-forward-search", "%TEX%", "%LINE%", "-reuse-instance", "-inverse-search", 
+            "\"D:\\Application\\Microsoft VS Code\\Code.exe\" \"D:\\Application\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g -ms-enable-electron-run-as-node \"%f\":\"%l\"",
+             "%PDF%",    ],
+		
+	    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.bcf",
+        "*.run.xml",
+        "*.synctex.gz"
+    ]
+    // ======================== LaTeX 设置 END ========================	 
+
+	}
+}

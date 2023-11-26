@@ -1,0 +1,13 @@
+\section{Loop filter}
+\subsection{Passive Lag-lead Filter}
+\begin{equation*}
+    F(s) = \dfrac{1+s\tau_2}{1+s(\tau_1 + \tau_2)}
+\end{equation*}
+\begin{align*}
+    \Rightarrow H(s) &= \dfrac{K_{pd}\cdot K_{vco}\cdot \dfrac{1+s\tau_2}{1+s(\tau_1 + \tau_2)}}{K_{pd}\cdot K_{vco}\cdot \dfrac{1+s\tau_2}{1+s\left(\tau_1 + \tau_2\right)}+N\cdot s}\\
+    &= \dfrac{\dfrac{K_{pd}\cdot K_{vco}\cdot \tau_2}{N\cdot \left(\tau_1 + \tau_2\right)}\cdot \left(s+\dfrac{1}{\tau_2}\right)}{s^2 + \dfrac{1+\dfrac{K_{pd}\cdot K_{vco}\cdot \tau_2}{N}}{\tau_1 + \tau_2}\cdot s + \dfrac{K_{pd}\cdot K_{vco}}{N\cdot \left(\tau_1 + \tau_2\right)}} 
+\end{align*}
+\begin{align*}
+    \Rightarrow 2\omega_n \zeta &= \dfrac{1+K_{pd}\cdot K_{vco}\cdot \tau_2}{\tau_1 +\tau_2} &\omega_n^2 &= \dfrac{K_{pd} \cdot K_{vco}}{N\cdot \left(\tau_1 + \tau_2\right)}\\
+    \Rightarrow \omega_n &= \sqrt{\dfrac{K_{pd}\cdot K_{vco}}{N\cdot \left(\tau_1 + \tau_2 \right)}} &\zeta &= \dfrac{N+K_{pd}\cdot K_{vco}\cdot \tau_2}{N\cdot \left(\tau_1 + \tau_2\right) \cdot 2\omega_n} = \dfrac{\omega_n}{2}\cdot \left(\tau_2 + \dfrac{N}{K_{pd}\cdot K_{vco}}\right)
+\end{align*}
